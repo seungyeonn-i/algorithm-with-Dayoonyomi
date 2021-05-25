@@ -6,6 +6,11 @@
 using namespace std;
 
 map<char, pair<char,char> > tree;
+//map<key : value>
+//pair은 데이터를 쌍으로 이룸
+//pair에 데이터 넣으려면 make_pair
+//pair 접근하려면 first, second
+
 
 void preorder(char);
 void inorder(char);
@@ -14,13 +19,12 @@ void postorder(char);
 int main(){
     int n;
     scanf("%d",&n);
-            char node,left,right;
-    getchar();
+    char node,left,right;
 
     for(int i=0;i<n;i++){
-        scanf("%c %c %c",&node,&left,&right);
         getchar();
-//        getchar();
+
+        scanf("%c %c %c",&node,&left,&right);
 
         tree[node] = make_pair(left,right);
     }
@@ -34,6 +38,7 @@ int main(){
     printf("\n");
     
 }
+//전위순회, 중위순회, 후위순회에서는 print의 위치가 중요함
 
 void preorder(char node){
     printf("%c",node);
