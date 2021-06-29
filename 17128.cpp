@@ -40,7 +40,6 @@ int main(){
 int sum(int *A,int i,int N){   //4개 곱한거
     int S=1;
 
-
     for(int j=0;j<4;j++){   //4개 순회
         if( i+j >= N)  {
             j = 4-j+1;
