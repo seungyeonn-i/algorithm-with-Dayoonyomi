@@ -12,7 +12,7 @@ int main(){
     scanf("%d",&n);
     while(n--){
 
-        set<int>arr;
+        multiset<int>arr;
         scanf("%d",&a);
 
         for(int k=0;k<a;k++){
@@ -26,6 +26,8 @@ int main(){
                 arr.insert(j);
             else{
                 
+                    if(arr.empty())
+                        continue;
                     if(!arr.empty() && j == 1){ //max delete
                         auto p = arr.end(); // 끝을 가리킨다
                         p--;//??? 그 앞에꺼 
